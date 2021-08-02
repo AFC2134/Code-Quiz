@@ -2,17 +2,22 @@
     box-sizing: border-box;
 }
 :root {
-    --hue-neutral: 200
-    --hue-correct: 145
-    --hue-wrong: 0;
+    --hue-neutral: goldenrod;
+    --hue-correct: blue;
+    --hue-wrong: red;
 }
 .time {
     display: flexbox;
-    font-size: 1.4rem;
+    font-size: 2.1rem;
     font-weight: bolder;
     align-self: flex-start;
 }
-
+.banner {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    align-self: flex-start;
+}
 body {
     --hue: var(--hue-neutral);
     padding: 0;
@@ -20,11 +25,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: goldenrod;
+    background-color: var(--hue-neutral);
     width: 100vw;
     height: 100vh;
 }
-
+body.correct {
+    --hue: var(--hue-correct);
+}
+ body.wrong {   
+     --hue: var(--hue-wrong);
+    }
 .quiz-container {
     width: 900px;
     height: 300px;
@@ -32,7 +42,7 @@ body {
     border-radius: 10px;
     background-color: green;
     box-sizing: border-box;
-    box-shadow: 0 0 5px 5px;
+    box-shadow: 0 0 15px 5px;
 }
 .btn-menu {
     display: grid;
@@ -60,7 +70,9 @@ body.correct {
 body.wrong {
     --hue: var(--hue-wrong);
 }
-
+.question-box {
+    font-size: 1.3rem;
+}
 .start-button {
     font-size: 1.3rem;
     font-weight: bold;

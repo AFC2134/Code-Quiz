@@ -1,16 +1,20 @@
-const startButton = document.getElementById('start-btn')
-const nextButton = document.getElementById('next-btn')
-const questionBoxElement = document.getElementById('question-box')
-const questionElement = document.getElementById('question')
-const answerButtonElement = document.getElementById('answer-btns')
+var startButton = document.getElementById('start-btn')
+var nextButton = document.getElementById('next-btn')
+var questionBoxElement = document.getElementById('question-box')
+var questionElement = document.getElementById('question')
+var answerButtonElement = document.getElementById('answer-btns')
 var count = 60;
 var interval = setInterval(function(){
   document.getElementById('count').innerHTML=count;
   count--;
   if (count === 0){
     clearInterval(interval);
-    document.getElementById('count').innerHTML='Done';
+    document.getElementById('count').innerHTML='TIME IS UP!';
     alert("You have run out of time!");
+  }
+  if (answer !== correct){ 
+      button.dataset.correct = answer.correct
+      interval = (interval - 10)
   }
 }, 1000);
 
@@ -121,5 +125,14 @@ const questions = [
             { text: 'VS Code', false: false},
             { text: 'GitBash', false: false},
         ]
-    },]       
+    },{ question: 'Which of these is not a DOM method?',
+    answers: [
+        { text: 'querySelector', correct: true},
+        { text: 'createElement', false: false},
+        { text: 'setAttribute', false: false},
+        { text: 'function', false: false},
+    ]
+
+    },
+]       
 
