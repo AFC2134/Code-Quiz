@@ -7,7 +7,10 @@ const answerButtonElement = document.getElementById('answer-btns')
 let randomQuestions, currentQuestionIndex
 
  startButton.addEventListener('click', startGame)
-
+ nextButton.addEventListener('click', () => {
+     currentQuestionIndex++
+     nextQuestion()
+ })
 function startGame() {
    console.log('started')
    startButton.classList.add('hide')
@@ -50,7 +53,12 @@ function selectAnswer(e) {
    Array.from(answerButtonElement.children).forEach(button => {
        setStatusClass(button, button.dataset.correct)
    })
+   if (randomQuestions.length > currentQuestionIndex + 1){
    nextButton.classList.remove('hide')
+} else {
+    startButton.innerText = 'Play Again'
+    startButton.classList.remove('hide')
+}
 }
 function setStatusClass(element, correct) {
     clearStatusClass(element)
