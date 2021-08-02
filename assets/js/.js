@@ -14,10 +14,9 @@ var interval = setInterval(function(){
   }
   if (answer !== correct){ 
       button.dataset.correct = answer.correct
-      interval = (interval - 10)
+      interval = (count - 10)
   }
 }, 1000);
-
 
 let randomQuestions, currentQuestionIndex
 
@@ -136,3 +135,21 @@ const questions = [
     },
 ]       
 
+function checkAnswer() {
+    let question = questions[currentQuestionIndex];
+    let out = $('.output').value;
+if (out == questions.answer) {
+        score++;
+    }
+    currentQuestion++;
+    if (currentQuestionIndex >= questions.length) {
+        showSummary();
+    } else {
+        showQuestion();
+    }
+
+    $('.sub').click(function () {
+        $('.output').val('');
+    });
+}
+checkAnswer()

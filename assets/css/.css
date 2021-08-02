@@ -84,3 +84,6 @@ body.wrong {
 .hide {
     display:none;
 }
+.footer
+{ display: flexbox;
+float: inline-start;}
