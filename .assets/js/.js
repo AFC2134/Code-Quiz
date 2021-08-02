@@ -39,6 +39,7 @@ function showQuestion(question) {
  })
 }
 function resetQuiz() {
+    clearStatusClass(document.body)
     nextButton.classList.add('hide')
     while (answerButtonElement.firstChild) {
         answerButtonElement.removeChild
@@ -80,7 +81,9 @@ const questions = [
         question: 'What is an example of a 3rd party API?',
         answers: [
             { text: 'Bootstrap', correct: true},
-            { text: 'javahubs', false: false}
+            { text: 'javahubs', false: false},
+            { text: 'github', false: false},
+            { text: 'debugger', false: false},
         ]
     },
     {
