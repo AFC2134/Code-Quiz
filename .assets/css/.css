@@ -6,6 +6,13 @@
     --hue-correct: 145
     --hue-wrong: 0;
 }
+.time {
+    display: flexbox;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    align-self: flex-start;
+}
+
 body {
     --hue: var(--hue-neutral);
     padding: 0;

@@ -3,6 +3,17 @@ const nextButton = document.getElementById('next-btn')
 const questionBoxElement = document.getElementById('question-box')
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-btns')
+var count = 60;
+var interval = setInterval(function(){
+  document.getElementById('count').innerHTML=count;
+  count--;
+  if (count === 0){
+    clearInterval(interval);
+    document.getElementById('count').innerHTML='Done';
+    alert("You have run out of time!");
+  }
+}, 1000);
+
 
 let randomQuestions, currentQuestionIndex
 
@@ -90,19 +101,25 @@ const questions = [
         question: 'What does HTML stand for?',
         answers: [
             { text: 'Hyptertext Markup Languague', correct: true},
-            { text: 'Hyperfast Modal Language', false: false}
+            { text: 'Hyperfast Modal Language', false: false},
+            { text: 'Hyper-timed Markup Languague', false: false},
+            { text: 'Hexidecimal Triggered Markup Language', false: false},
         ]
     },{
         question: 'Who invented the intenet?',
         answers: [
             { text: 'US military through the ARPANET', correct: true},
-            { text: 'Al Gore', false: false}
+            { text: 'Al Gore', false: false},
+            { text: 'Bill Gates', false: false},
+            { text: "NASA", false: false},
         ]
     },{
-        question: 'Which of the two 3rd party APIs would I use with Javascript?',
+        question: 'Which of these 3rd party APIs would I use with Javascript?',
         answers: [
             { text: 'jquery', correct: true},
-            { text: 'Bootstrap', false: false}
+            { text: 'Bootstrap', false: false},
+            { text: 'VS Code', false: false},
+            { text: 'GitBash', false: false},
         ]
     },]       
 
