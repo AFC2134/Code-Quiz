@@ -1,12 +1,19 @@
 
+const startButton = document.getElementById('start-btn');
+const questionBoxEl = document.getElementById
+ ('question-box')
+startButton.addEventListener('click', startGame);
 
+function startGame() {
+   console.log('started')
+   startButton.classList.add('hide');
+   questionBoxEl.classList.remove('hide');
+}
 
+function nextQuestion() {
 
+}
 
-var buttonEl = document.querySelector("#begin-quiz");
+function selectAnswer() {
 
-
-
-buttonEl.addEventListener("click", function() {
-    alert("You Have one minute to answer as many questions as possible!");
-  });
+}
