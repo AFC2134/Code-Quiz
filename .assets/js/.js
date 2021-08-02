@@ -82,6 +82,24 @@ const questions = [
             { text: 'Bootstrap', correct: true},
             { text: 'javahubs', false: false}
         ]
-    }
-]
+    },
+    {
+        question: 'What does HTML stand for?',
+        answers: [
+            { text: 'Hyptertext Markup Languague', correct: true},
+            { text: 'Hyperfast Modal Language', false: false}
+        ]
+    },{
+        question: 'Who invented the intenet?',
+        answers: [
+            { text: 'US military through the ARPANET', correct: true},
+            { text: 'Al Gore', false: false}
+        ]
+    },{
+        question: 'Which of the two 3rd party APIs would I use with Javascript?',
+        answers: [
+            { text: 'jquery', correct: true},
+            { text: 'Bootstrap', false: false}
+        ]
+    },]       
 
