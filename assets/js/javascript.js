@@ -78,11 +78,11 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if(correct) {
-        element.classList.add('correct')
+        element.setAttribute("class",'correct')
     } else {
-        element.classList.add('wrong')
+        element.setAttribute("class",'wrong')
     }
-}
+} 
 
 function clearStatusClass(element) {
     element.classList.remove('correct')
