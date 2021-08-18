@@ -33,10 +33,10 @@ body {
     --hue: var(--hue-neutral);
 }
 .correct {
-    --hue: var(--hue-correct);
+    background-color: green;
 }
- .wrong {   
-     --hue: var(--hue-wrong);
+.wrong {   
+    background-color: brown;
     }
 .quiz-container {
     width: 900px;

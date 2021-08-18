@@ -12,7 +12,7 @@ var interval = setInterval(function(){
     document.getElementById('count').innerHTML='TIME IS UP!';
     alert("You have run out of time!");
   }
-  if (answer !== correct){ 
+  if (answer != correct){ 
       button.dataset.correct = answer.correct
       interval = (count - 10)
   }
@@ -137,7 +137,7 @@ const questions = [
 
 function checkAnswer() {
     let question = questions[currentQuestionIndex];
-    let out = $('.output').value;
+    let out = $('.answer').value;
 if (out == questions.answer) {
         score++;
     }
@@ -149,7 +149,7 @@ if (out == questions.answer) {
     }
 
     $('.sub').click(function () {
-        $('.output').val('');
+        $('.answser').val('');
     });
 }
 checkAnswer()
