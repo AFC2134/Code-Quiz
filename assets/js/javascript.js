@@ -134,22 +134,22 @@ const questions = [
 
     },
 ]       
+const correct = selectedButton.dataset.correct
+// function checkAnswer() {
+//     let question = questions[currentQuestionIndex];
+//     let out = $('.answer').value;
+// if (out == questions.answer) {
+//         score++;
+//     }
+//     currentQuestion++;
+//     if (currentQuestionIndex >= questions.length) {
+//         showSummary();
+//     } else {
+//         showQuestion();
+//     }
 
-function checkAnswer() {
-    let question = questions[currentQuestionIndex];
-    let out = $('.answer').value;
-if (out == questions.answer) {
-        score++;
-    }
-    currentQuestion++;
-    if (currentQuestionIndex >= questions.length) {
-        showSummary();
-    } else {
-        showQuestion();
-    }
-
-    $('.sub').click(function () {
-        $('.answser').val('');
-    });
-}
-checkAnswer()
+//     $('.sub').click(function () {
+//         $('.answser').val('');
+//     });
+// }
+// checkAnswer()

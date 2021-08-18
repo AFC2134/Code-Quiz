@@ -90,3 +90,10 @@ body.wrong {
 .footer
 { display: flexbox;
 float: inline-start;}
+
+.time {
+    align-items: center;
+}
+.push {
+    padding-top: 300px ;
+}
