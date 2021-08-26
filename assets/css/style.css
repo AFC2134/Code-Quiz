@@ -75,6 +75,7 @@ body.wrong {
 }
 .question-box {
     font-size: 1.3rem;
+    margin: 0 auto;
 }
 .start-button {
     font-size: 1.3rem;

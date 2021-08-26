@@ -4,19 +4,7 @@ var questionBoxElement = document.getElementById('question-box')
 var questionElement = document.getElementById('question')
 var answerButtonElement = document.getElementById('answer-btns')
 var count = 60;
-var interval = setInterval(function(){
-  document.getElementById('count').innerHTML=count;
-  count--;
-  if (count === 0){
-    clearInterval(interval);
-    document.getElementById('count').innerHTML='TIME IS UP!';
-    alert("You have run out of time!");
-  }
-  if (answer != correct){ 
-      button.dataset.correct = answer.correct
-      interval = (count - 10)
-  }
-}, 1000);
+var playerScore = 0;
 
 let randomQuestions, currentQuestionIndex
 
@@ -79,9 +67,12 @@ function setStatusClass(element, correct) {
     clearStatusClass(element)
     if(correct) {
         element.setAttribute("class",'correct')
+        playerScore ++;
     } else {
         element.setAttribute("class",'wrong')
+        count -= 1
     }
+
 } 
 
 function clearStatusClass(element) {
@@ -135,21 +126,45 @@ const questions = [
     },
 ]       
 
-function checkAnswer() {
-    let question = questions[currentQuestionIndex];
-    let out = $('.answer').value;
-if (out == questions.answer) {
-        score++;
-    }
-    currentQuestion++;
-    if (currentQuestionIndex >= questions.length) {
-        showSummary();
-    } else {
-        showQuestion();
-    }
+// function checkAnswer() {
+//     let question = questions[currentQuestionIndex];
+//     let out = $('.answer').value;
+// if (out == questions.answer) {
+//         score++;
+//     }
+//     currentQuestion++;
+//     if (currentQuestionIndex >= questions.length) {
+//         showSummary();
+//     } else {
+//         showQuestion();
+//     }
 
-    $('.sub').click(function () {
-        $('.answser').val('');
-    });
-}
-checkAnswer()
+//     $('.sub').click(function () {
+//         $('.answser').val('');
+//     });
+// }
+var interval = setInterval(function(correct){
+    document.getElementById('count').innerHTML = count;
+    count--;
+    if (count === 0){
+      clearInterval(interval);
+      document.getElementById('count').innerHTML='TIME IS UP!';
+      alert("You have run out of time!");
+    }
+    if (answer != correct){ 
+        answer.correct = button.dataset.correct
+        interval = (count - 10)
+    }
+  }, 1000);
+
+function score() {
+    const correct = selectedButton.dataset.correct
+    let playerScore = 0;
+    if (correct === true) 
+    {
+       playerScore ++;
+    }      
+};
+console.log(playerScore)
+score()
+// // checkAnswer()
