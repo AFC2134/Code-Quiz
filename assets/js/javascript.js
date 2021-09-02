@@ -4,7 +4,8 @@ var questionBoxElement = document.getElementById('question-box')
 var questionElement = document.getElementById('question')
 var answerButtonElement = document.getElementById('answer-btns')
 var count = 60;
-var playerScore = 0;
+var playerScore = 0
+
 
 let randomQuestions, currentQuestionIndex
 
@@ -70,7 +71,7 @@ function setStatusClass(element, correct) {
         playerScore ++;
     } else {
         element.setAttribute("class",'wrong')
-        count -= 1
+        count -= 3
     }
 
 } 
